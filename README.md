@@ -12,5 +12,4 @@ Data:
 
 - Distribution network (DN): A Spanish distribution network (POLA), provided in JSON format.
 
-- Load profiles: Type 1 consumer profiles from Fluvius. These can be found at:
-https://github.com/umar-hashmi/Public-Load-profile-Datasets/tree/67649f157b0b1bc96a64f57504a0847c38bd3f85/Fluvius_Consumer_profiles_2022
+- Load profiles: Type 1 consumer profiles from Fluvius. These can be found at: https://github.com/umar-hashmi/Public-Load-profile-Datasets/blob/67649f157b0b1bc96a64f57504a0847c38bd3f85/Fluvius_Consumer_profiles_2022/Type1_consumer_Fluvius.zip
