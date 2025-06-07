@@ -1,9 +1,9 @@
 # ScenarioReduction
-This repository contains the code for the proposed scenario reduction methodology. The methodology is demonstrated using case studies from the associated conference paper. These case studies are implemented in the main script scenario_reduction_casestudies_milanvercammen.jl. This script serves as the main entry point and should be used to reproduce the results presented in the paper. All other function files and data must be placed in the same folder for the script to run correctly.
+This repository contains the code for the proposed scenario reduction methodology. The methodology is demonstrated using case studies from the associated paper. These case studies are implemented in the main script scenario_reduction_casestudies_milanvercammen.jl. This script serves as the main entry point and should be used to reproduce the results presented in the paper. All other function files and data must be placed in the same folder for the script to run correctly.
 
 Repository Structure:
 
-- scenario_reduction_casestudies_milanvercammen.jl: Main script that reproduces the case studies from the paper. This file includes comments and guidance on where to place the required input data.
+- scenario_reduction_casestudies_milanvercammen.jl: Main script that reproduces the case studies from the paper.
 
 - scenario_reduction_functions.jl: Contains the core functions implementing the scenario reduction methodology.
 
