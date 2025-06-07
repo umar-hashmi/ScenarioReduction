@@ -2,6 +2,8 @@
 using CSV, DataFrames, StatsBase, Plots, Distributions, Random
 using PowerModels, JuMP, Ipopt
 
+load_dir = raw"C:\Users\milan\OneDrive - KU Leuven\2nd master\Thesis\2nd semester\Type1_consumer_Fluvius" #adjust this path to your local directory where the consumer profiles are stored
+
 # FUNCTIONs (these two files need to be in the same folder as this script): 
 include("scenario_reduction_functions.jl") #contribution of this paper
 include("load_scenario_generation.jl") #load scenario generation functions based on a multivariate Gaussian distribution with Cholesky decomposition, as introduced in https://doi.org/10.1016/j.segan.2023.101069
@@ -94,7 +96,6 @@ display(plt)
 # Read and store all 300 profiles in memory
 consumer_ids_df = CSV.read("consumertype_IDs.csv", DataFrame; delim=';')
 all_ids = Int64.(consumer_ids_df[1:300, "type1_IDs"])
-load_dir = raw"C:\Users\milan\OneDrive - KU Leuven\2nd master\Thesis\2nd semester\Type1_consumer_Fluvius"
 all_profiles = Dict{Int, Vector{Float64}}()
 
 for id in all_ids
@@ -487,9 +488,6 @@ for scenario_idx in 1:n_scenarios
         println("Power flow failed for scenario $scenario_idx")
     end
 end
-
-#save the vm_matrix to a csv file
-CSV.write("vm_matrix_postpowerflowevaluation.csv", DataFrame(vm_matrix), header=["bus_" * string(i) for i in 1:n_buses])
 
 # compute the reduced scenarios for the POLA network (with assigned fluvius consumers)
 reduced_info = casestudy4_reducedscenarios()
